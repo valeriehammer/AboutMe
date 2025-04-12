@@ -54,7 +54,7 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color(hue: 0.702, saturation: 0.508, brightness: 0.537))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        //The .leading prompt didn't work here to align text to the left. I did research, and it seems this sometimes doesn't work when the text is nested in stack. Found the above line of workaround code.
+                        //The .leading prompt didn't work here to align text to the left. I did research, and it seems leading alignment sometimes doesn't work when the text is nested in a stack. Found the above line of workaround code.
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 3) {
@@ -85,6 +85,7 @@ struct ContentView: View {
                         }
                     }
 //End code for My Family header and scrolling, horizontal stack with photos of family members
+
 //Begin code for Places I've Lived header and scrolling, horizontal stack of shapes with names of places I've lived.
                         Text ("Places I've Lived and Worked")
                         .font(.title3)
@@ -254,8 +255,9 @@ struct ContentView: View {
                                     .frame(width: 100, height: 100) // Match circle dimensions
                             }
                         }
-                        //End Places I've lived and worked scrolling horizontal stack
-                        //Begin My First Comics Zine
+                    }
+//End Places I've lived and worked scrolling horizontal stack
+//Begin Link to Comics
                         Text (" ")
                         
                         Link(destination: URL(string: "https://online.fliphtml5.com/lllnp/rtsw/#p=1")!) {
@@ -271,9 +273,8 @@ struct ContentView: View {
                             .font(.subheadline)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(Color(hue: 0.27, saturation: 0.674, brightness: 0.617))
-                        
-                        
-                    }
+                        // Information about pen name ends here
+//End Link to Comics Section
                 }
                 .padding()
 //end VStack with padding
