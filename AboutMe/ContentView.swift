@@ -5,14 +5,14 @@
 //  Created by Valerie Hammer on 4/10/25.
 //
 
-//Design Option 1 in Coolor - Calm and Earthy
+//Design Option 1 in Coolor - Calm and Earthy (initial iteration)
 //Sage Green: Color(red: 0.79 , green: 0.79, blue: 0.64)
 //Butter yellow: Color(red: 1, green: 0.88, blue: 0.66)
 //Coral: Color(red: 0.89, green: 0.42, blue: 0.36)
 //Purple: Color(red: 0.45, green: 0.24, blue: 0.27)
 //Dark Maroon: Color(red: 0.28, green: 0.18, blue: 0.19)
 
-//Design Option 2 in Coolor - Summery Lavendar Garden
+//Design Option 2 in Coolor - Summery Lavendar Garden (final iteration)
 //Dark Purple: Color(hue: 0.702, saturation: 0.508, brightness: 0.537)
 //Lavendar: Color(red: 0.56, green: 0.48, blue: 0.84)
 //Light Green: Color(red: 0.65, green: 0.79, blue: 0.34)
@@ -52,7 +52,7 @@ struct ContentView: View {
                     Text ("My Family")
                         .font(.title3)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.557, green: 0.48, blue: 0.84))
+                        .foregroundColor(Color(hue: 0.702, saturation: 0.508, brightness: 0.537))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         //The .leading prompt didn't work here to align text to the left. I did research, and it seems this sometimes doesn't work when the text is nested in stack. Found the above line of workaround code.
                     
@@ -89,7 +89,7 @@ struct ContentView: View {
                         Text ("Places I've Lived and Worked")
                         .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 0.56, green: 0.48, blue: 0.84))
+                            .foregroundColor(Color(hue: 0.702, saturation: 0.508, brightness: 0.537))
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Text ("")
                         //Blank line of text used for spacing again.
@@ -257,17 +257,20 @@ struct ContentView: View {
                         //End Places I've lived and worked scrolling horizontal stack
                         //Begin My First Comics Zine
                         Text (" ")
-                        ZStack {
-                            Link(destination: URL(string: "https://online.fliphtml5.com/lllnp/rtsw/#p=1")!) {
-                                Text("Click here to check out my comics")
-                                    .font(.title2)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(Color(hue: 0.27, saturation: 0.674, brightness: 0.617))
-                                    .multilineTextAlignment(.leading)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Link(destination: URL(string: "https://online.fliphtml5.com/lllnp/rtsw/#p=1")!) {
+                            Text("Click here to check out my comics")
+                                .font(.title2)
+                                .fontWeight(.heavy)
+                                .foregroundColor(Color(hue: 0.27, saturation: 0.674, brightness: 0.617))
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                        }
-                        // Link Zstack ends here
+                        // Link ends here
+                        Text ("My comics pen name is Amazing Grace")
+                            .font(.subheadline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(Color(hue: 0.27, saturation: 0.674, brightness: 0.617))
                         
                         
                     }
